@@ -1,0 +1,14 @@
+{
+  "name": "starter-app-prod",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "description": "Deploy manifest — runtime deps only. Copied to dist/package.json (type forced to commonjs for bundled .js).",
+  "scripts": {
+    "start": "node server.js",
+    "test:pvt": "node --test --test-concurrency=1 --test-timeout=${PVT_TIMEOUT_MS:-30000} pvt.js"
+  },
+  "dependencies": {
+    "jsdom": "^29.1.1"
+  }
+}
